@@ -22,3 +22,51 @@ Here's how props work in React:
    ```
 3. **Using Props Data**: The child component can use the data passed via props to render its UI dynamically. Props can contain any type of data, including strings, numbers, objects, arrays, or even functions.
 Props are essential for creating reusable and composable components in React. They enable components to be configurable and adaptable to different data and contexts, making React applications more flexible and maintainable.
+
+
+3. What is State in React Js?
+-In React.js, "state" is a built-in feature that allows components to manage their own data.
+Unlike props, which are passed down from parent components and are read-only, state is local to the component and can be modified using the `setState()` method.
+
+Here's how state works in React:
+1. **Initializing State**: You can initialize state in a component's constructor or by using a class field. For example:
+   ```jsx
+   class MyComponent extends React.Component {
+     constructor(props) {
+       super(props);
+       this.state = {
+         count: 0
+       };
+     }
+   }
+   ```
+2. **Accessing State**: State data can be accessed using `this.state` within the component's methods. For example:
+   ```jsx
+   render() {
+     return <div>Count: {this.state.count}</div>;
+   }
+   ```
+3. **Updating State**: To update the state, you should never directly modify `this.state`. Instead, use the `setState()` method provided by React. For example:
+   ```jsx
+   handleClick() {
+     this.setState({ count: this.state.count + 1 });
+   }
+   ```
+4. **Asynchronous State Updates**: `setState()` can also accept a function as an argument, which provides the previous state as an argument and returns the new state. This is useful for cases where the new state depends on the previous state. For example:
+   ```jsx
+   handleClick() {
+     this.setState((prevState) => ({
+       count: prevState.count + 1
+     }));
+   }
+   ```
+5. **State in Functional Components**: With the introduction of React Hooks, functional components can also have state using the `useState()` hook. For example:
+   ```jsx
+   import React, { useState } from 'react';
+
+   function MyComponent() {
+     const [count, setCount] = useState(0);
+     return <div>Count: {count}</div>;
+   }
+   ```
+State is crucial for creating interactive and dynamic UIs in React. It allows components to manage their data internally and update their rendering based on changes in that data.
