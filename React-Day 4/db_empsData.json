@@ -1,0 +1,32 @@
+{
+  "emps": [
+    {
+      "empno": 10,
+      "ename": "Arnav Sharma",
+      "job": "UI design",
+      "sal": "150000",
+      "deptno": "108"
+    },
+    {
+      "empno": 20,
+      "ename": "Aryan",
+      "job": "SDE",
+      "sal": 50000,
+      "deptno": 102
+    },
+    {
+      "empno": 40,
+      "ename": "Anu",
+      "job": "UI Dev",
+      "sal": 50000,
+      "deptno": 105
+    },
+    {
+      "empno": 50,
+      "ename": "Yashi",
+      "job": "UI Dev",
+      "sal": 50000,
+      "deptno": 106
+    }
+  ]
+}
