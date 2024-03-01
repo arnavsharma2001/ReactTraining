@@ -1,0 +1,79 @@
+What is Ajax?
+-Sure! Imagine you're sending a letter to your friend who lives far away. You write your message, put it in an envelope, and send it by mail. You don't wait around for a response. Instead, you go on with your day and continue playing with your toys. When your friend receives the letter, they read it and might send a reply back to you. This is a bit like how AJAX works on the web!
+
+**Properties of AJAX:**
+
+1. **Asynchronous**: Just like how you don't wait around for your friend's reply after sending a letter, AJAX allows web pages to send and receive data from a server without waiting for the entire page to reload.
+
+2. **JavaScript**: AJAX uses JavaScript to make requests to the server and handle the response. It's like the magic wand that makes everything happen on the web page.
+
+3. **XMLHttpRequest (XHR) Object**: This is a special tool (like a messenger) that JavaScript uses to communicate with the server. It sends requests asking for information and brings back the server's response.
+
+4. **Data Exchange Format**: AJAX can work with different types of data formats, such as JSON, XML, HTML, or plain text. JSON is like a simple language that both the browser and server understand easily.
+
+**Syntax:**
+
+Here's a simple example of how AJAX looks in code:
+
+```javascript
+// Create a new XMLHttpRequest object
+var xhr = new XMLHttpRequest();
+
+// Configure the request
+xhr.open('GET', 'https://api.example.com/data', true);
+
+// Set up a function to handle the response from the server
+xhr.onreadystatechange = function() {
+  if (xhr.readyState === XMLHttpRequest.DONE) {
+    if (xhr.status === 200) {
+      // If the request was successful (status code 200), do something with the data
+      console.log(xhr.responseText);
+    } else {
+      // If there was an error, handle it accordingly
+      console.error('Error:', xhr.status);
+    }
+  }
+};
+
+// Send the request to the server
+xhr.send();
+```
+In this example:
+- We create a new XMLHttpRequest object (`xhr`) to handle the communication with the server.
+- We configure the request using the `open()` method, specifying the type of request (GET), the URL of the server, and whether it should be asynchronous (true).
+- We set up a function (`onreadystatechange`) to handle the response from the server. When the state of the request changes, this function is called.
+- Inside the function, we check if the request is done (`readyState === XMLHttpRequest.DONE`) and if the status code is 200 (which means the request was successful).
+- If everything is okay, we do something with the data received from the server (e.g., log it to the console). If there's an error, we handle it accordingly.
+
+And that's the basics of AJAX! It's like sending letters back and forth between your web page and the server, allowing you to update parts of the page without reloading the whole thing. Cool, right?
+
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________-
+
+2. What is Json?
+- Alright, imagine JSON as a special language that computers use to talk to each other and share information, kind of like how you might use a secret code to send messages to your friends.
+
+In our special computer world, JSON stands for "JavaScript Object Notation." Let's break down what that means:
+
+1. **JavaScript**: Just like how you use words and sentences to communicate, computers use programming languages like JavaScript to understand and do things on websites.
+
+2. **Object**: In JavaScript, an object is like a container that can hold lots of different pieces of information, just like a box can hold your toys. Each piece of information in the object is called a "property," and it has a name and a value.
+
+3. **Notation**: This just means a way of writing things down. JSON uses a simple and easy-to-understand format for writing down objects and their properties.
+
+So, JSON is basically a way for computers to share information in a format that's easy for them to understand. It looks something like this:
+
+```json
+{
+  "name": "John",
+  "age": 10,
+  "toys": ["car", "ball"],
+  "address": {
+    "city": "Toyland",
+    "country": "Playground"
+  }
+}
+```
+
+In this JSON, we have an object that represents a kid named John. It has properties like "name" (with the value "John"), "age" (with the value 10), "toys" (which is a list of toys), and "address" (which is another object with properties like "city" and "country").
+
+So, JSON helps computers share information with each other in a way that's simple, organized, and easy to understand, just like how you might write down your list of favorite toys or your address in a notebook!
